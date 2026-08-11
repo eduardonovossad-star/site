@@ -34,8 +34,8 @@ body {
 
 .info-2 {
 
-    width: 900px;         
-    height: 280px;         
+    width: 800px;         
+    height: 290px;         
     background: linear-gradient(135deg, #1e1b4b, #000000); 
     color: #ffffff;         
     flex-direction: column;
