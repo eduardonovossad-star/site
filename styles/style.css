@@ -5,7 +5,7 @@ body {
     flex-direction: column; /* coloca um abaixo do outro */
     justify-content: center;
     align-items: center;
-    gap: 20px; /* espaço entre os cards d*/
+    gap: 20px; /* espaço entre os cardsdsa d*/
     background-color: #f0f0f0;
 }
 
