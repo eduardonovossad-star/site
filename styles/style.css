@@ -10,8 +10,8 @@ body {
 }
 
 .info-central {
-    width: 900px;
-    height: 290px;
+    width: 350px;
+    height: 150px;
     background: linear-gradient(135deg, #1e1b4b, #000000);
     color: #ffffff;
     display: flex;
