@@ -1,49 +1,122 @@
-body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+* {
+    box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 24px;
+    padding: 48px 20px;
+
+    background-color: #f0f0f0;
+}
+
+
+/* BLOCO PRINCIPAL */
 .info-central {
-    width: 900px;
-    height: 290px;
-    width: 350px;
-    height: 150px;
+    width: min(900px, 100%);
+    min-height: 290px;
+
     background: linear-gradient(135deg, #1e1b4b, #000000);
     color: #ffffff;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
+
+    padding: 40px 24px;
+
     border-radius: 8px;
     border: 1px solid grey;
 }
 
+.info-central h1 {
+    margin: 0 0 8px 0;
+}
+
+.info-central h2 {
+    margin: 0 0 24px 0;
+}
+
+.info-central a {
+    display: inline-flex;
+}
+
+
+/* BOTÃO EXPLORAR */
 #Explor {
     width: 120px;
     height: 60px;
+
     background: linear-gradient(130deg, #000000, rgb(22, 16, 49));
+
     border-radius: 8px;
     border: 1px solid #f0f0f0;
+
     color: rgb(255, 255, 255);
+
     font-size: medium;
     font-weight: bold;
+
+    cursor: pointer;
 }
 
+
+/* SEGUNDO BLOCO */
 .info-2 {
-    width: 350px;
-    height: 150px;
+    width: min(900px, 100%);
+    min-height: 180px;
+
     background: linear-gradient(135deg, #1e1b4b, #000000);
     color: #ffffff;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
+
+    padding: 30px 24px;
+
     border-radius: 8px;
     border: 1px solid grey;
+}
+
+.info-2 h3 {
+    margin: 0 0 12px 0;
+}
+
+.info-2 h6 {
+    margin: 0;
+    max-width: 700px;
+}
+
+
+/* CELULAR */
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 14px;
+        gap: 16px;
+    }
+
+    .info-central {
+        min-height: 260px;
+        padding: 30px 18px;
+    }
+
+    .info-2 {
+        min-height: 170px;
+        padding: 24px 18px;
+    }
 }
