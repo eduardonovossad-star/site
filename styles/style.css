@@ -67,7 +67,8 @@ body {
 }
 
 .info-2 {
-    width: 350px;
+    width: 650px;
+    height: 250px;
 
     background: linear-gradient(135deg, #1e1b4b, #000000);
     color: #ffffff;
