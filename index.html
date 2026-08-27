@@ -48,6 +48,7 @@
 
             border-radius: 12px;
             border: 1px solid #cbd5e1;
+            box-shadow: 0px 6px 10px;
         }
 
         .icone {
@@ -83,7 +84,7 @@
             background: linear-gradient(130deg, #315b8a,#6c8eb4);
 
             border-radius: 8px;
-            border: none;
+            border-color: aqua;
 
             color: white;
 
@@ -91,6 +92,7 @@
             font-weight: bold;
 
             cursor: pointer;
+            box-shadow: 0px 6px 10px rgb(98, 214, 235);
         }
 
         #Explor:hover {
@@ -119,6 +121,7 @@
 
             border-radius: 12px;
             border: 1px solid #cbd5e1;
+            box-shadow: 0px 6px 10px black;
         }
 
         .info-2 h3,
@@ -147,13 +150,64 @@
         .popup {
             display: none;
             width: 300px;
-             padding: 20px;
-             background: white;
+            padding: 20px;
+            background: rgb(255, 252, 252);
             border-radius: 10px;
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            outline-color: black;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.974);
+            border: 4px, rgb(169, 164, 164);
+        }
+
+        #continuar {
+            
+            height: 50px;
+            background: linear-gradient(130deg, #70ff61,#98fdb1);
+
+            border-radius: 8px;
+            border-color: green;
+
+            color: white;
+
+            font-size: medium;
+            font-weight: bold;
+
+            cursor: pointer;
+            box-shadow: 0px 6px 10px rgb(130, 253, 142);
+        }
+
+        #cancelar {
+            height: 50px;
+        background: linear-gradient(130deg, #ee2f2f,#eaa4a4);
+            border-radius: 8px;
+            border-color: red;
+            color: white;
+            font-size: medium;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0px 6px 10px rgb(255, 117, 117);
+        }
+
+        #hasy23has {
+            text-align: center;
+            background: linear-gradient(110deg, rgb(254, 255, 255), rgb(255, 255, 255));
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0px 6px 10px rgb(193, 191, 191);
+            
+        }
+       
+        #like {
+
+            height: 25px;
+            background: #eaa4a4;
+            border-radius: 8px;
+            border-color: red;
+            box-shadow: 0px 6px 10px rgb(253, 125, 125);
+            
         }
 
     </style>
@@ -192,8 +246,8 @@
 </div>
 
 <div class="popup">
-    <h1>⚠️</h1>
-    <h3>Redirecionando...</h3>
+    <h1 id="hasy23has">⚠️</h1>
+    <h3 id="hasy23has">Redirecionando...</h3>
     <button id="continuar">Continuar</button>
     <button id="cancelar">Cancelar</button>
 </div>
@@ -228,7 +282,6 @@
     //botão de cancelar
     let cancelar = document.querySelector("#cancelar")
     cancelar.addEventListener("click", cancelar1)
-
     function cancelar1(){
         explorbox.style.display = "none";
 
