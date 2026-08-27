@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,7 @@
     <title>Bliblion</title>
 
     <style>
-
-        body { 
+        body {
             margin: 0;
             min-height: 100vh;
             padding: 30px 0;
@@ -81,7 +81,7 @@
             width: 120px;
             height: 50px;
 
-            background: linear-gradient(130deg, #315b8a,#6c8eb4);
+            background: linear-gradient(130deg, #315b8a, #6c8eb4);
 
             border-radius: 8px;
             border-color: aqua;
@@ -103,7 +103,7 @@
             width: 650px;
             min-height: 180px;
 
-            background: linear-gradient( 130deg, #b1efff,  #ffffff);
+            background: linear-gradient(130deg, #b1efff, #ffffff);
             color: #334155;
 
             display: flex;
@@ -142,11 +142,13 @@
         }
 
         @media (max-width: 700px) {
+
             .info-central,
             .info-2 {
                 width: 90%;
             }
         }
+
         .popup {
             display: none;
             width: 300px;
@@ -163,9 +165,9 @@
         }
 
         #continuar {
-            
+
             height: 50px;
-            background: linear-gradient(130deg, #70ff61,#98fdb1);
+            background: linear-gradient(130deg, #70ff61, #98fdb1);
 
             border-radius: 8px;
             border-color: green;
@@ -181,7 +183,7 @@
 
         #cancelar {
             height: 50px;
-        background: linear-gradient(130deg, #ee2f2f,#eaa4a4);
+            background: linear-gradient(130deg, #ee2f2f, #eaa4a4);
             border-radius: 8px;
             border-color: red;
             color: white;
@@ -197,9 +199,9 @@
             padding: 10px;
             border-radius: 15px;
             box-shadow: 0px 6px 10px rgb(193, 191, 191);
-            
+
         }
-       
+
         #like {
 
             height: 25px;
@@ -207,85 +209,106 @@
             border-radius: 8px;
             border-color: red;
             box-shadow: 0px 6px 10px rgb(253, 125, 125);
-            
-        }
 
+        }
     </style>
 </head>
 
 <body>
 
-<div class="info-central">
+    <div class="info-central">
 
-    <div class="icone">📚</div>
+        <div class="icone">📚</div>
 
-    <h1>Bliblion</h1>
+        <h1>Bliblion</h1>
 
-    <h2>Sua biblioteca online</h2>
+        <h2>Sua biblioteca online</h2>
 
-    <a href="">
-        <button id="Explor">Explorar</button>
-    </a>
+        <a href="">
+            <button id="Explor">Explorar</button>
+        </a>
 
-</div>
+    </div>
 
-<div class="info-2">
+    <div class="info-2">
 
-    <h3>Leia livros dos seus autores preferidos!!</h3> 
+        <h3>Leia livros dos seus autores preferidos!!</h3>
 
-    <h6>
-        Ao clicar em explorar você será redirecionado(a) para a página de login do "leiaparana.odilo.us"
-    </h6>
+        <h6>
+            Ao clicar em explorar você será redirecionado(a) para a página de login do "leiaparana.odilo.us"
+        </h6>
 
-    <main>
-        <button id="like">❤️ <span>0</span></button>
-        <h6>Gostou de ter sua vida facilitada?Nos de um coração.</h6>
-    </main>
-  
+        <main>
+            <button id="like">❤️ <span>0</span></button>
+            <button id="like">👍<span>0</span></button>
+            <h6>Gostou de ter sua vida facilitada?Nos de um coração.</h6>
+        </main>
 
-</div>
 
-<div class="popup">
-    <h1 id="hasy23has">⚠️</h1>
-    <h3 id="hasy23has">Redirecionando...</h3>
-    <button id="continuar">Continuar</button>
-    <button id="cancelar">Cancelar</button>
-</div>
+    </div>
+
+    <div class="popup">
+        <h1 id="hasy23has">⚠️</h1>
+        <h3 id="hasy23has">Redirecionando...</h3>
+        <button id="continuar">Continuar</button>
+        <button id="cancelar">Cancelar</button>
+    </div>
 
 </body>
 <script>
     //botão de like
-    const like = document.querySelector("#like");
+    /*const like = document.querySelector("#like");
     like.addEventListener("click", botaoClicado);
 
     function botaoClicado(){
         let liketx = like.querySelector("span")
         liketx.textContent++;
-    }
+    }*/
+
+  
+    const like = document.querySelectorAll("#like")
+    
+    like.forEach(lkbtn => {
+        let gostou = false;
+        lkbtn.onclick = function () {
+            if(gostou === false){
+            gostou = true;
+            this.querySelector("span").textContent++
+            }
+            else{
+                this.querySelector("span").textContent--;
+                gostou = false
+
+            }
+        }
+    });
+
+    
 
     //pop up de aviso
     let buttonEX = document.querySelector("#Explor")
-        buttonEX.addEventListener("click", popup)
+    buttonEX.addEventListener("click", popup)
     let explorbox = document.querySelector(".popup")
-    function popup(event){
+    function popup(event) {
         event.preventDefault()
-      explorbox.style.display = "block";
+        explorbox.style.display = "block";
     }
 
     //manda para o leia parana ao clicar em continuar
     let continuar = document.querySelector("#continuar")
     continuar.addEventListener("click", continuaref);
-    function continuaref(){
+    function continuaref() {
         window.location.href = "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2Fo%2Fsaml2%2Fcontinue%3Fidpid%3DC03fukzmn%26SAMLRequest%3DPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8%252BPHNhbWwycDpBdXRoblJlcXVlc3QgeG1sbnM6c2FtbDJwPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6cHJvdG9jb2wiIEFzc2VydGlvbkNvbnN1bWVyU2VydmljZVVSTD0iaHR0cHM6Ly9zaXIub2RpbG90ay5lcy9jYWxsYmFjaz9jbGllbnRfbmFtZT1zZWVkIiBEZXN0aW5hdGlvbj0iaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL28vc2FtbDIvaWRwP2lkcGlkPUMwM2Z1a3ptbiIgRm9yY2VBdXRobj0iZmFsc2UiIElEPSJfMTIxODQ2OTZhMzhhNDBjZGI3MmQzNDE2NTdjY2VlN2I5YjY2ZThjIiBJc1Bhc3NpdmU9ImZhbHNlIiBJc3N1ZUluc3RhbnQ9IjIwMjYtMDgtMDRUMTc6NDI6MzkuODEwWiIgUHJvdG9jb2xCaW5kaW5nPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YmluZGluZ3M6SFRUUC1QT1NUIiBQcm92aWRlck5hbWU9InBhYzRqLXNhbWwiIFZlcnNpb249IjIuMCI%252BPHNhbWwyOklzc3VlciB4bWxuczpzYW1sMj0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmFzc2VydGlvbiIgRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6bmFtZWlkLWZvcm1hdDplbnRpdHkiPmh0dHBzOi8vc2lyLm9kaWxvdGsuZXMvY2FsbGJhY2s%2FY2xpZW50X25hbWU9c2VlZDwvc2FtbDI6SXNzdWVyPjwvc2FtbDJwOkF1dGhuUmVxdWVzdD4%253D%26RelayState%3Dhttps%3A%2F%2Fsir.odilotk.es%2Fcallback%3Fclient_name%253Dseed%26omethod%3DPOST&dsh=S1042350896%3A1785865361443791&faa=1&followup=https%3A%2F%2Faccounts.google.com%2Fo%2Fsaml2%2Fcontinue%3Fidpid%3DC03fukzmn%26SAMLRequest%3DPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8%252BPHNhbWwycDpBdXRoblJlcXVlc3QgeG1sbnM6c2FtbDJwPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6cHJvdG9jb2wiIEFzc2VydGlvbkNvbnN1bWVyU2VydmljZVVSTD0iaHR0cHM6Ly9zaXIub2RpbG90ay5lcy9jYWxsYmFjaz9jbGllbnRfbmFtZT1zZWVkIiBEZXN0aW5hdGlvbj0iaHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL28vc2FtbDIvaWRwP2lkcGlkPUMwM2Z1a3ptbiIgRm9yY2VBdXRobj0iZmFsc2UiIElEPSJfMTIxODQ2OTZhMzhhNDBjZGI3MmQzNDE2NTdjY2VlN2I5YjY2ZThjIiBJc1Bhc3NpdmU9ImZhbHNlIiBJc3N1ZUluc3RhbnQ9IjIwMjYtMDgtMDRUMTc6NDI6MzkuODEwWiIgUHJvdG9jb2xCaW5kaW5nPSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6YmluZGluZ3M6SFRUUC1QT1NUIiBQcm92aWRlck5hbWU9InBhYzRqLXNhbWwiIFZlcnNpb249IjIuMCI%252BPHNhbWwyOklzc3VlciB4bWxuczpzYW1sMj0idXJuOm9hc2lzOm5hbWVzOnRjOlNBTUw6Mi4wOmFzc2VydGlvbiIgRm9ybWF0PSJ1cm46b2FzaXM6bmFtZXM6dGM6U0FNTDoyLjA6bmFtZWlkLWZvcm1hdDplbnRpdHkiPmh0dHBzOi8vc2lyLm9kaWxvdGsuZXMvY2FsbGJhY2s%2FY2xpZW50X25hbWU9c2VlZDwvc2FtbDI6SXNzdWVyPjwvc2FtbDJwOkF1dGhuUmVxdWVzdD4%253D%26RelayState%3Dhttps%3A%2F%2Fsir.odilotk.es%2Fcallback%3Fclient_name%253Dseed%26omethod%3DPOST&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=Ac50bxvp3hY24vFbj-nn-CDe0yxeovB1xIWJ7s9HSBD_l2lkVPTpIHj3AbQ-FpjszNDhFQ1bThZ5vQ"
 
     }
     //botão de cancelar
     let cancelar = document.querySelector("#cancelar")
     cancelar.addEventListener("click", cancelar1)
-    function cancelar1(){
+    function cancelar1() {
         explorbox.style.display = "none";
 
     }
 
 </script>
+
 </html>
