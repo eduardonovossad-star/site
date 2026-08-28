@@ -1,0 +1,237 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 30px 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+
+  background-color: #eef3f8;
+
+  font-family: Arial, sans-serif;
+
+  box-sizing: border-box;
+}
+
+.info-central {
+  width: 650px;
+
+  background: linear-gradient(135deg, #ffffff, #d4f9fa);
+  color: #24324a;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  gap: 15px;
+  padding: 30px 20px;
+
+  box-sizing: border-box;
+
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0px 6px 10px;
+}
+
+.icone {
+  font-size: 50px;
+}
+
+.info-central h1,
+.info-central h2 {
+  margin: 0;
+}
+
+.info-central h1 {
+  color: #315b8a;
+}
+
+.info-central h2 {
+  font-size: 18px;
+  color: #64748b;
+}
+
+.info-central a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+}
+
+#Explor {
+  width: 120px;
+  height: 50px;
+
+  background: linear-gradient(130deg, #315b8a, #6c8eb4);
+
+  border-radius: 8px;
+  border-color: aqua;
+
+  color: white;
+
+  font-size: medium;
+  font-weight: bold;
+
+  cursor: pointer;
+  box-shadow: 0px 6px 10px rgb(98, 214, 235);
+}
+
+#Explor:hover {
+  background-color: #24476d;
+}
+
+.info-2 {
+  width: 650px;
+  min-height: 180px;
+
+  background: linear-gradient(130deg, #b1efff, #ffffff);
+  color: #fdfdfd;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  gap: 15px;
+  padding: 25px 30px;
+
+  box-sizing: border-box;
+
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0px 6px 10px black;
+}
+
+.info-2 h3,
+.info-2 h6 {
+  margin: 0;
+  text-align: center;
+}
+
+.info-2 h3 {
+  color: #315b8a;
+  font-size: 21px;
+}
+
+.info-2 h6 {
+  color: #64748b;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+@media (max-width: 700px) {
+  .info-central,
+  .info-2 {
+    width: 90%;
+  }
+}
+
+.popup {
+  display: none;
+  width: 300px;
+  padding: 20px;
+  background: rgb(255, 252, 252);
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline-color: black;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.974);
+  border: 4px, rgb(169, 164, 164);
+}
+
+#continuar {
+  height: 50px;
+  background: linear-gradient(130deg, #70ff61, #98fdb1);
+
+  border-radius: 8px;
+  border-color: green;
+
+  color: white;
+
+  font-size: medium;
+  font-weight: bold;
+
+  cursor: pointer;
+  box-shadow: 0px 6px 10px rgb(130, 253, 142);
+}
+
+#cancelar {
+  height: 50px;
+  background: linear-gradient(130deg, #ee2f2f, #eaa4a4);
+  border-radius: 8px;
+  border-color: red;
+  color: white;
+  font-size: medium;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 6px 10px rgb(255, 117, 117);
+}
+
+#hasy23has {
+  text-align: center;
+  background: linear-gradient(110deg, rgb(254, 255, 255), rgb(255, 255, 255));
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 10px rgb(193, 191, 191);
+}
+
+#like {
+  height: 25px;
+  background: #eaa4a4;
+  border-radius: 8px;
+  border-color: red;
+  box-shadow: 0px 6px 10px rgb(253, 125, 125);
+}
+
+/* chá eu resumi para n esquecer, lá no js eu criei uma variavel que armazena o botão, e ai criei uma função que
+ ao clicar no botão
+ela troca <body> por <body class="dark"> e então retira as cores do css original e muda por esse, e vice versa*/ 
+body.dark {
+    background: black;
+}
+
+body.dark .info-central {
+    background: linear-gradient(135deg, black, gray);
+    color: white;
+}
+
+body.dark .info-2 {
+    background: linear-gradient(130deg, gray, black);
+    color: white;
+}
+
+body.dark .info-central h1,
+body.dark .info-central h2,
+body.dark .info-2 h3,
+body.dark .info-2 h6 {
+    color: white;
+}
+
+#mode {
+  display: flex;
+  height: 25px;
+  background: #f4f1f1;
+  border-radius: 8px;
+  border-color: rgb(255, 255, 254);
+  box-shadow: 0px 6px 10px rgb(2, 2, 2);
+  color: black;
+  justify-content: flex-start;
+  align-items: center;
+  right: 10px !important;
+  position: fixed;
+  top: 10px;
+}
