@@ -235,3 +235,65 @@ body.dark .info-2 h6 {
   position: fixed;
   top: 10px;
 }
+#verificar {
+  position: fixed;
+  height: 30px;
+  background-color: rgb(17, 16, 16);
+  color: white;
+  display: flex;
+  box-shadow: 0px 6px 10px black;
+  border-radius: 8px;
+  border-color: rgb(255, 255, 255);
+  top: 45%;
+  left: 43%;
+
+}
+#erro{
+display: flex;
+height: 20px;
+position: fixed;
+top: 55%;
+left: 43%;
+text-align: center;
+background-color: rgb(230, 247, 245);
+box-shadow: 0px 6px 10px black; 
+}
+#oculto {
+  color: black;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  top: 60%;
+  left: 43%;
+}
+#enter {
+
+  top: 70%;
+  left: 43%;
+  position: fixed;
+}
+#title {
+  color: rgb(29, 27, 27);
+  position: fixed;
+  top: 20%;
+  left: 43%;
+  text-align: center;
+  margin-bottom: 20px;
+  font-style: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0px 6px 10px black;
+  background-color: rgb(247, 246, 246);
+  border-radius: 8px;
+  border-color: rgb(255, 255, 255);
+
+}
+.Card {
+  width: 300px;
+  height: 400px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 6px 10px black;
+  border-radius: 8px;
+
+
+}
