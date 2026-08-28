@@ -71,7 +71,7 @@ body {
   width: 120px;
   height: 50px;
 
-  background: linear-gradient(130deg, #315b8a, #6c8eb4);
+  background-color: rgb(90, 90, 240);
 
   border-radius: 8px;
   border-color: aqua;
@@ -86,7 +86,9 @@ body {
 }
 
 #Explor:hover {
-  background-color: #24476d;
+ transition: all 0.7s ease;
+  background-color: blue;
+  transform: scale(1.05);
 }
 
 .info-2 {
@@ -155,7 +157,7 @@ body {
 
 #continuar {
   height: 50px;
-  background: linear-gradient(130deg, #70ff61, #98fdb1);
+  background-color: rgb(2, 131, 2);
 
   border-radius: 8px;
   border-color: green;
@@ -168,10 +170,15 @@ body {
   cursor: pointer;
   box-shadow: 0px 6px 10px rgb(130, 253, 142);
 }
+#continuar:hover{
+  background-color: rgb(0, 255, 0);
+  transition: all 0.5s ease;
+  transform: scale(1.05);
+}
 
 #cancelar {
   height: 50px;
-  background: linear-gradient(130deg, #ee2f2f, #eaa4a4);
+  background-color: red;
   border-radius: 8px;
   border-color: red;
   color: white;
@@ -180,6 +187,11 @@ body {
   cursor: pointer;
   box-shadow: 0px 6px 10px rgb(255, 117, 117);
 }
+#cancelar:hover {
+  background-color: #e11b1b;
+  transition: all 0.5s ease;
+  transform: scale(1.05);
+} 
 
 #hasy23has {
   text-align: center;
@@ -196,10 +208,19 @@ body {
   border-color: red;
   box-shadow: 0px 6px 10px rgb(253, 125, 125);
 }
+#like:hover{
+  background-color: #ee2f2f;
+  transition: all 0.5s ease;
+  transform: scale(1.05);
+}
 
 /* chá eu resumi para n esquecer, lá no js eu criei uma variavel que armazena o botão, e ai criei uma função que
  ao clicar no botão
 ela troca <body> por <body class="dark"> e então retira as cores do css original e muda por esse, e vice versa*/ 
+* {
+  transition: all 0.3s ease;
+
+}
 body.dark {
     background: black;
 }
@@ -221,19 +242,36 @@ body.dark .info-2 h6 {
     color: white;
 }
 
+body.dark #mode {
+  background-color: rgb(255, 200, 3);
+  color: black;
+  border-color:rgb(243, 244, 246);
+  box-shadow: 0px 6px 10px rgb(252, 252, 251);
+}
+
 #mode {
   display: flex;
-  height: 25px;
-  background: #f4f1f1;
-  border-radius: 8px;
-  border-color: rgb(255, 255, 254);
+  height: 50px;
+  width: 50px;
+  background: #03217e;
+  border-radius: 50%;
+  border-color: rgb(255, 255, 1);
   box-shadow: 0px 6px 10px rgb(2, 2, 2);
   color: black;
   justify-content: flex-start;
-  align-items: center;
+
   right: 10px !important;
   position: fixed;
   top: 10px;
+  bottom: 16px;
+  font-size: 32px;
+  padding: 1px;
+  size: 20px;
+  transition: all 0.7s ease;
+}
+#mode:hover {
+  transition: all 0.5s ease;
+  transform: scale(1.05);
 }
 #verificar {
   position: fixed;
@@ -248,6 +286,12 @@ body.dark .info-2 h6 {
   left: 43%;
 
 }
+#verificar:hover {
+  background-color: rgb(46, 45, 45);
+  transition: all 0.5s ease;
+  transform: scale(1.05);
+
+}
 #erro{
 display: flex;
 height: 20px;
@@ -257,7 +301,14 @@ left: 43%;
 text-align: center;
 background-color: rgb(230, 247, 245);
 box-shadow: 0px 6px 10px black; 
+border-radius: 8px;
 }
+#erro:hover {
+background-color: gray;
+transition: all 0.5s ease;
+transform: scale(1.05);
+}
+
 #oculto {
   color: black;
   background-color: rgb(255, 255, 255);
@@ -265,11 +316,9 @@ box-shadow: 0px 6px 10px black;
   top: 60%;
   left: 43%;
 }
-#enter {
-
-  top: 70%;
-  left: 43%;
-  position: fixed;
+#oculto:hover {
+  transition: all 0.5s ease;
+  transform: scale(1.05);
 }
 #title {
   color: rgb(29, 27, 27);
@@ -283,7 +332,7 @@ box-shadow: 0px 6px 10px black;
   box-shadow: 0px 6px 10px black;
   background-color: rgb(247, 246, 246);
   border-radius: 8px;
-  border-color: rgb(255, 255, 255);
+  border-color: rgb(7, 6, 6);
 
 }
 .Card {
